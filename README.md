@@ -1,1 +1,4 @@
 # nvim
+
+## Dependencies
+- ripgrep

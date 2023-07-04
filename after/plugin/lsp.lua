@@ -7,6 +7,7 @@ end)
 lsp.ensure_installed({
   'tsserver',
   'eslint',
+  'intelephense',
 })
 
 -- (Optional) Configure lua language server for neovim

@@ -1,12 +1,17 @@
 local lsp = require('lsp-zero').preset({})
 
 lsp.on_attach(function(client, bufnr)
-  lsp.default_keymaps({buffer = bufnr})
+    lsp.default_keymaps({buffer = bufnr})
+    lsp.default_keymaps({buffer = bufnr})
+    local opts = {buffer = bufnr}
+
+    vim.keymap.set({'n', 'x'}, 'gq', function()
+        vim.lsp.buf.format({async = false, timeout_ms = 10000})
+    end, opts)
 end)
 
 lsp.ensure_installed({
   'tsserver',
-  'eslint',
   'intelephense',
 })
 

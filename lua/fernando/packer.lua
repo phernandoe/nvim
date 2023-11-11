@@ -42,5 +42,6 @@ use {
 }
 use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 use('tpope/vim-fugitive')
-use { "catppuccin/nvim", as = "catppuccin" }
+use('airblade/vim-gitgutter')
+use { "ellisonleao/gruvbox.nvim" }
 end)

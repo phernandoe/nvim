@@ -44,4 +44,5 @@ return require('packer').startup(function(use)
     use('tpope/vim-fugitive')
     use('airblade/vim-gitgutter')
     use { "ellisonleao/gruvbox.nvim" }
+    use('towolf/vim-helm')
 end)

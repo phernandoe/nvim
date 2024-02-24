@@ -15,8 +15,28 @@ lsp.ensure_installed({
   'intelephense',
 })
 
+local lspconfig = require('lspconfig')
 -- (Optional) Configure lua language server for neovim
-require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+lspconfig.lua_ls.setup(lsp.nvim_lua_ls())
+
+lspconfig.helm_ls.setup {
+    settings = {
+        ['helm-ls'] = {
+            yamlls = {
+                path = "yaml-language-server",
+            }
+        }
+    }
+}
+lspconfig.yamlls.setup {
+    settings = {
+        yaml = {
+            schemas = {
+                kubernetes = "*.yaml"
+            }
+        }
+    }
+}
 
 lsp.skip_server_setup({'jdtls'})
 

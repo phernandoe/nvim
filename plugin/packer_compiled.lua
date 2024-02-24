@@ -159,6 +159,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/fbarretomendoza/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
     url = "https://github.com/airblade/vim-gitgutter"
+  },
+  ["vim-helm"] = {
+    loaded = true,
+    path = "/Users/fbarretomendoza/.local/share/nvim/site/pack/packer/start/vim-helm",
+    url = "https://github.com/towolf/vim-helm"
   }
 }
 

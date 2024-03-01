@@ -1,18 +1,18 @@
 local lsp = require('lsp-zero').preset({})
 
 lsp.on_attach(function(client, bufnr)
-    lsp.default_keymaps({buffer = bufnr})
-    local opts = {buffer = bufnr}
+    lsp.default_keymaps({ buffer = bufnr })
+    local opts = { buffer = bufnr }
 
-    vim.keymap.set({'n', 'x'}, 'gq', function()
-        vim.lsp.buf.format({async = false, timeout_ms = 10000})
+    vim.keymap.set({ 'n', 'x' }, 'gq', function()
+        vim.lsp.buf.format({ async = false, timeout_ms = 10000 })
     end, opts)
-	vim.keymap.set('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
+    vim.keymap.set('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
 end)
 
 lsp.ensure_installed({
-  'tsserver',
-  'intelephense',
+    'tsserver',
+    'intelephense',
 })
 
 local lspconfig = require('lspconfig')
@@ -23,22 +23,13 @@ lspconfig.helm_ls.setup {
     settings = {
         ['helm-ls'] = {
             yamlls = {
+                enabled = false,
                 path = "yaml-language-server",
             }
         }
     }
 }
-lspconfig.yamlls.setup {
-    settings = {
-        yaml = {
-            schemas = {
-                kubernetes = "*.yaml"
-            }
-        }
-    }
-}
 
-lsp.skip_server_setup({'jdtls'})
+lsp.skip_server_setup({ 'jdtls' })
 
 lsp.setup()
-

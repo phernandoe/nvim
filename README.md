@@ -1,9 +1,5 @@
-# Neovim config
-
 ## What's in the box:
 packer.nvim - Total plugins: 18
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 * LuaSnip
 * cmp-nvim-lsp

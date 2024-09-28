@@ -9,6 +9,7 @@ lsp.on_attach(function(client, bufnr)
     end, opts)
     vim.keymap.set('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
     vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', opts)
+    vim.keymap.set('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
 end)
 
 lsp.ensure_installed({

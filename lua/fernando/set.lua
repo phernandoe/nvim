@@ -23,8 +23,6 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
-vim.opt.colorcolumn = "80"
-
 vim.opt.updatetime = 50
 
 vim.o.background = "dark" -- or "light" for light mode

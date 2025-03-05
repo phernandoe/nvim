@@ -38,8 +38,6 @@ local function get_jdtls_paths()
         path.platform_config = jdtls_install .. '/config_mac'
     elseif vim.fn.has('unix') == 1 then
         path.platform_config = jdtls_install .. '/config_linux'
-    elseif vim.fn.has('win32') == 1 then
-        path.platform_config = jdtls_install .. '/config_win'
     end
 
     path.bundles = {}

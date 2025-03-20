@@ -8,7 +8,7 @@ vim.api.nvim_create_autocmd({ "BufWritePost" }, {
     desc = "Auto-format PHP files after saving",
     callback = function()
         local fileName = vim.api.nvim_buf_get_name(0)
-        vim.cmd(":!php-cs-fixer fix " .. fileName)
+        vim.cmd("silent :!php-cs-fixer fix " .. fileName)
     end,
     group = autocmd_group,
 })

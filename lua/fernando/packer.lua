@@ -41,4 +41,14 @@ return require('packer').startup(function(use)
     use('airblade/vim-gitgutter')
     use("ellisonleao/gruvbox.nvim")
     use('towolf/vim-helm')
+    use({
+        "olimorris/codecompanion.nvim",
+        config = function()
+            require("codecompanion").setup()
+        end,
+        requires = {
+            "nvim-lua/plenary.nvim",
+            "nvim-treesitter/nvim-treesitter",
+        }
+    })
 end)

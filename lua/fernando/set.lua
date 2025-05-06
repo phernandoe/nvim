@@ -27,3 +27,5 @@ vim.opt.updatetime = 50
 
 vim.o.background = "dark" -- or "light" for light mode
 vim.cmd.colorscheme "gruvbox"
+
+vim.diagnostic.config({virtual_lines=true})

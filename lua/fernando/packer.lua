@@ -23,6 +23,7 @@ return require('packer').startup(function(use)
                     pcall(vim.cmd, 'MasonUpdate')
                 end,
             },
+            { 'williamboman/mason-lspconfig.nvim' },
             -- Autocompletion
             { 'hrsh7th/nvim-cmp' },     -- Required
             { 'hrsh7th/cmp-nvim-lsp' }, -- Required

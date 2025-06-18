@@ -38,6 +38,7 @@ return {
 				"vimdoc",
 				"yaml",
 				"java",
+				"php",
 			},
 		},
 		config = function(_, opts)

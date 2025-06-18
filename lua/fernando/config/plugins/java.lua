@@ -11,14 +11,31 @@ return {
           jdtls = {
              settings = {
                java = {
+                 eclipse = { downloadSources = true },
+                 maven = { downloadSources = true },
+                 implementationsCodeLens = { enabled = true },
+                 referencesCodeLens = { enabled = true },
+                 format = { enabled = true },
                  configuration = {
                    runtimes = {
                      {
-                       name = "JavaSE-23",
+                       name = "JavaSE-21",
                        path = "/usr/libexec/java_home -v21",
                      },
                    },
                  },
+                 sources = {
+                    organizeImports = {
+                    starThreshold = 9999,
+                    staticStarThreshold = 9999,
+                },
+                },
+                codeGeneration = {
+                    toString = {
+                        template = '${object.className}{${member.name()}=${member.value}, ${otherMembers}}',
+                    },
+                    useBlocks = true,
+                },
                },
              },
           },
@@ -36,6 +53,10 @@ return {
                  "gradlew",
                  "build.gradle",
                  "build.gradle.kts",
+                 ".git",
+               },
+               lombok = {
+                    version = 'nightly',
                },
             })
           end,

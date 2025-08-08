@@ -8,6 +8,7 @@ return {
       vim.lsp.enable('ts_ls')
       vim.lsp.enable('lua_ls')
       require('lspconfig').lua_ls.setup { capabilities = capabilities }
+      require('lspconfig').jdtls.setup({})
   end,
 }
 

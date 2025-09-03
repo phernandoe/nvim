@@ -27,4 +27,4 @@ vim.opt.updatetime = 50
 
 vim.o.background = "dark" -- or "light" for light mode
 
-vim.diagnostic.config({virtual_lines=true})
+vim.diagnostic.config({virtual_lines={current_line=true}, virtual_text=false})

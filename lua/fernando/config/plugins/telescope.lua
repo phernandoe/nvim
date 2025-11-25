@@ -16,5 +16,11 @@ return {
                 search = vim.fn.input("Grep > ")
             }
         end)
+        vim.keymap.set('n', '<leader>fd', function ()
+            require('telescope.builtin').find_files {
+                cwd = '~/dev/',
+                find_command = { 'ls' }
+            }
+        end)
     end
 }

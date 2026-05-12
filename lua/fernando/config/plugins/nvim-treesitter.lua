@@ -42,6 +42,9 @@ return {
 			},
 		},
 		config = function(_, opts)
+			-- zsh has no dedicated parser; use bash
+			vim.treesitter.language.register("bash", "zsh")
+
 			-- install parsers from custom opts.ensure_installed
 			if opts.ensure_installed and #opts.ensure_installed > 0 then
 				require("nvim-treesitter").install(opts.ensure_installed)

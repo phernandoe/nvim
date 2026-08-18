@@ -1,4 +1,4 @@
-require("fernando.config.lazy")
+require("fernando.config.pack")
 require("fernando.set")
 require("fernando.remap")
 require("fernando.autocmds")

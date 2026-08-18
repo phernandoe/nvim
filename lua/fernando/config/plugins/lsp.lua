@@ -1,13 +1,4 @@
-return {
-    "neovim/nvim-lspconfig",
-    dependencies = { 'saghen/blink.cmp' },
-    config = function()
-        local capabilities = require('blink.cmp').get_lsp_capabilities()
-        vim.lsp.config('lua_ls', { setup = { capabilities = capabilities } })
-
-        vim.lsp.enable('intelephense')
-        vim.lsp.enable('jdtls')
-        vim.lsp.enable('ts_ls')
-        vim.lsp.enable('lua_ls')
-    end,
-}
+-- blink.cmp registers its completion capabilities for every server from its own
+-- `plugin/` file, so there is nothing to wire up by hand here.
+-- jdtls is enabled from java.lua, because nvim-java has to build its config first.
+vim.lsp.enable({ "intelephense", "ts_ls", "lua_ls" })
